@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checklist Pasantías 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+    padding:40px 20px;
+    color:white;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    font-size:2.4rem;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#cbd5e1;
+}
+
+.progress-box{
+    margin-bottom:35px;
+}
+
+.progress-text{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+    color:#e2e8f0;
+}
+
+.progress{
+    width:100%;
+    height:16px;
+    background:rgba(255,255,255,.1);
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#38bdf8,#22c55e);
+    transition:.4s;
+}
+
+.section{
+    margin-bottom:35px;
+}
+
+.section-title{
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:15px;
+    color:#7dd3fc;
+}
+
+.task{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    background:rgba(255,255,255,.05);
+    padding:16px;
+    border-radius:18px;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.task:hover{
+    background:rgba(255,255,255,.1);
+    transform:translateY(-2px);
+}
+
+.task input{
+    width:22px;
+    height:22px;
+    margin-top:2px;
+    cursor:pointer;
+}
+
+.task label{
+    line-height:1.5;
+    cursor:pointer;
+}
+
+.task input:checked + label{
+    text-decoration:line-through;
+    opacity:.6;
+}
+
+.info{
+    margin-top:30px;
+    background:rgba(56,189,248,.12);
+    border-left:4px solid #38bdf8;
+    padding:20px;
+    border-radius:15px;
+    color:#e2e8f0;
+}
+
+.info strong{
+    color:white;
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:25px;
+    }
+
+    header h1{
+        font-size:1.8rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>✅ Checklist de Pasantías 2026</h1>
+    <p>Trayecto II y Trayecto IV · Programa Nacional de Formación en Turismo (PNFT)</p>
+</header>
+
+<div class="progress-box">
+    <div class="progress-text">
+        <span>Progreso</span>
+        <span id="counter">0 / 17</span>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+</div>
+
+<!-- PASANTÍAS -->
+
+<div class="section">
+    <div class="section-title">🏢 Documentos de Pasantías</div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Comunicación de solicitud de incorporación a las pasantías emitida por cada estudiante ante el Área de Pasantías, dirigida a la Prof. Adys Reyes y firmada por el estudiante.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Carta de aceptación por parte de la empresa, firmada por la Gerencia correspondiente y remitida al estudiante y al Área de Pasantías.</label>
+    </div>
+</div>
+
+<!-- PERSONALES -->
+
+<div class="section">
+    <div class="section-title">📁 Documentos Personales</div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Tres (03) fotografías tipo carnet fondo blanco con uniforme de protocolo.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Dos (02) fotocopias de la Cédula de Identidad (normal, no amplificada).</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Currículo Vitae con foto en uniforme de protocolo (02 impresos a color y 01 digital en PDF).</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Dos (02) copias del RIF actualizado.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Dos (02) copias del Carnet Militar.</label>
+    </div>
+
+</div>
+
+<!-- SALUD -->
+
+<div class="section">
+    <div class="section-title">🏥 Documentos de Salud</div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Original y una (01) copia del Certificado de Salud vigente con todos los soportes médicos correspondientes.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Original y una (01) copia del Certificado de Higiene y Manipulación de Alimentos.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Constancia de Adulto Sano original y copia.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Original y una (01) copia del Certificado de Vacunas vigente (Toxoide, Fiebre Amarilla, Antigripal, Hepatitis, COVID-19, entre otras).</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Prueba de embarazo (según lo establecido en el documento).</label>
+    </div>
+
+</div>
+
+<!-- FORMATOS -->
+
+<div class="section">
+    <div class="section-title">📝 Formatos y Planillas</div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Planilla de inscripción de pasantías debidamente llenada de forma digital e impresa.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Encuesta de datos generales del estudiante debidamente llenada de forma digital e impresa.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Actas de compromiso, deberes y derechos de los pasantes (02 ejemplares).</label>
+    </div>
+
+</div>
+
+<!-- ENTREGA -->
+
+<div class="section">
+    <div class="section-title">📦 Entrega Final</div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Un (01) sobre manila tamaño carta.</label>
+    </div>
+
+    <div class="task">
+        <input type="checkbox" class="check">
+        <label>Pago de arancel (original y copia).</label>
+    </div>
+
+</div>
+
+<div class="info">
+
+<strong>📅 Fechas de entrega</strong><br><br>
+
+Trayecto II: del 29 de junio al 01 de julio de 2026.<br>
+Trayecto IV: 02 y 03 de julio de 2026.<br><br>
+
+⏰ Horario: 08:00 AM a 02:00 PM.<br><br>
+
+⚠️ Recuerda: la falta de un (01) requisito impide el recibimiento de los documentos.
+
+</div>
+
+</div>
+
+<script>
+
+const checks = document.querySelectorAll('.check');
+const counter = document.getElementById('counter');
+const progressBar = document.getElementById('progressBar');
+
+function updateProgress(){
+
+    const checked = document.querySelectorAll('.check:checked').length;
+    const total = checks.length;
+
+    counter.textContent = `${checked} / ${total}`;
+
+    let percentage = (checked / total) * 100;
+
+    progressBar.style.width = percentage + "%";
+}
+
+checks.forEach(item=>{
+    item.addEventListener('change',updateProgress);
+});
+
+updateProgress();
+
+</script>
+
+</body>
+</html>
