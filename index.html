@@ -307,22 +307,47 @@ const checks = document.querySelectorAll('.check');
 const counter = document.getElementById('counter');
 const progressBar = document.getElementById('progressBar');
 
-function updateProgress(){
+// 1. Función para guardar el estado actual de los checkboxes
+function saveProgress() {
+    const state = [];
+    checks.forEach(item => {
+        state.push(item.checked);
+    });
+    localStorage.setItem('pasantiasChecklist2026', JSON.stringify(state));
+}
 
+// 2. Función para cargar el estado guardado al abrir la página
+function loadProgress() {
+    const savedState = localStorage.getItem('pasantiasChecklist2026');
+    if (savedState) {
+        const state = JSON.parse(savedState);
+        checks.forEach((item, index) => {
+            if (state[index] !== undefined) {
+                item.checked = state[index];
+            }
+        });
+    }
+}
+
+function updateProgress(){
     const checked = document.querySelectorAll('.check:checked').length;
     const total = checks.length;
 
     counter.textContent = `${checked} / ${total}`;
 
     let percentage = (checked / total) * 100;
-
     progressBar.style.width = percentage + "%";
+    
+    // Guardamos cada vez que cambia el progreso
+    saveProgress();
 }
 
 checks.forEach(item=>{
-    item.addEventListener('change',updateProgress);
+    item.addEventListener('change', updateProgress);
 });
 
+// Primero cargamos lo que esté guardado, luego calculamos la barra de progreso
+loadProgress();
 updateProgress();
 
 </script>
